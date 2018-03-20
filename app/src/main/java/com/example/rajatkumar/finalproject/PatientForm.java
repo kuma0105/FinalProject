@@ -11,4 +11,4 @@ public class PatientForm extends Activity {
         setContentView(R.layout.activity_patient_form);
     }
 }
-// Vaibhav jain
+// Vaibhav jain is assigned to this activity
