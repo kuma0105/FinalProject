@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/Name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Patient Name" />
+
+    <TextView
+        android:id="@+id/nameAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Address" />
+
+    <TextView
+        android:id="@+id/addAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Patient Birthday" />
+
+    <TextView
+        android:id="@+id/birthAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/PhoneNum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone Number" />
+
+    <TextView
+        android:id="@+id/numAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+   />
+
+    <TextView
+        android:id="@+id/hCard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Health Card" />
+
+    <TextView
+        android:id="@+id/hCardAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/descript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description" />
+
+    <TextView
+        android:id="@+id/descriptAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/preSurgeries"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Previous Surguries" />
+
+    <TextView
+        android:id="@+id/Ans1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+
+    <TextView
+        android:id="@+id/aller"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Allergies" />
+
+    <TextView
+        android:id="@+id/Ans2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+         />
+
+    <TextView
+        android:id="@+id/docType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Doctor Type" />
+
+    <TextView
+        android:id="@+id/typeAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/gBought"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glass Bought" />
+
+    <TextView
+        android:id="@+id/gbAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/glasStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Glass Store" />
+
+    <TextView
+        android:id="@+id/storeAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/benef"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Benefits" />
+
+    <TextView
+        android:id="@+id/beneAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:id="@+id/hBrace"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Had Braces" />
+
+    <TextView
+        android:id="@+id/hbraceAns"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/delButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete" />
+</LinearLayout>

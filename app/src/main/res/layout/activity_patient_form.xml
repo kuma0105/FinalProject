@@ -1,9 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.rajatkumar.finalproject.PatientForm">
 
-</android.support.constraint.ConstraintLayout>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="Patient Detail Form"
+        android:textAppearance="@android:style/TextAppearance.DeviceDefault.DialogWindowTitle" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="25dp"
+        android:text="Name : "
+        android:textAppearance="@android:style/TextAppearance" />
+
+    <EditText
+        android:id="@+id/editTextName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/name"
+        android:layout_alignBottom="@+id/name"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=" "
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/name"
+        android:layout_below="@+id/editTextName"
+        android:layout_marginTop="22dp"
+        android:text="Address : "
+        android:textAppearance="@android:style/TextAppearance" />
+
+    <EditText
+        android:id="@+id/editTextAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/address"
+        android:layout_alignBottom="@+id/address"
+        android:layout_alignStart="@+id/textView"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=" " />
+
+    <TextView
+        android:id="@+id/birthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/address"
+        android:layout_below="@+id/editTextAddress"
+        android:layout_marginTop="20dp"
+        android:text="Birthday : "
+        android:textAppearance="@android:style/TextAppearance" />
+
+    <EditText
+        android:id="@+id/editTextBirthday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/birthday"
+        android:layout_alignBottom="@+id/birthday"
+        android:layout_alignStart="@+id/editTextAddress"
+        android:ems="10"
+        android:inputType="date" />
+
+    <TextView
+        android:id="@+id/phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/editTextPhone"
+        android:layout_alignBottom="@+id/editTextPhone"
+        android:layout_alignStart="@+id/birthday"
+        android:text="Phone No. : "
+        android:textAppearance="@android:style/TextAppearance" />
+
+    <EditText
+        android:id="@+id/editTextPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextBirthday"
+        android:layout_below="@+id/editTextBirthday"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/healthCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/phone"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_marginTop="24dp"
+        android:text="Health Card :"
+        android:textAppearance="@android:style/TextAppearance" />
+
+    <EditText
+        android:id="@+id/editTextCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/editTextPhone"
+        android:layout_below="@+id/editTextPhone"
+        android:layout_marginTop="11dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/textView"
+        android:text="Submit" />
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/healthCard"
+        android:layout_below="@+id/editTextCard"
+        android:text="Whom do you want to see for appointment?"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="17dp"
+        android:id="@+id/textView2" />
+
+
+
+       <RadioGroup
+        android:id="@+id/selectedId"
+        android:checkedButton="@id/rbDoctor"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="23dp" >
+
+        <RadioButton
+            android:id="@+id/rbDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor"/>
+
+        <RadioButton
+            android:id="@+id/rbDentist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dentist"/>
+
+        <RadioButton
+            android:id="@+id/rbOptometrist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Optometrist"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/selectedId"
+        android:layout_alignTop="@+id/submit"
+        android:text="Description" />
+
+    <EditText
+        android:id="@+id/descAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/desc"
+        android:layout_alignBottom="@+id/desc"
+        android:layout_toStartOf="@+id/submit"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
+</RelativeLayout>

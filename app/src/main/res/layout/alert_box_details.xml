@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/dialogue1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="66dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/dialogue2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/dialogue1"
+        android:layout_below="@+id/dialogue1"
+        android:layout_marginTop="77dp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/dialogueAns1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="55dp"
+        android:layout_toEndOf="@+id/dialogue1"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/dialogueAns2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/dialogueAns1"
+        android:layout_below="@+id/dialogueAns1"
+        android:layout_marginTop="45dp"
+        android:layout_marginStart="28dp"
+        android:layout_toRightOf="@+id/dialogue2"
+        android:inputType="textPersonName"
+        />
+
+
+</RelativeLayout>
