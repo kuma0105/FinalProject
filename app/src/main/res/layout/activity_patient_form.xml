@@ -139,39 +139,53 @@
         android:textSize="17dp"
         android:id="@+id/textView2" />
 
-    <CheckBox
-        android:id="@+id/doctorcheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="11dp"
-        android:text="Doctor" />
 
-    <CheckBox
-        android:id="@+id/dentistcheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/doctorcheck"
-        android:text="Dentist" />
 
-    <CheckBox
-        android:id="@+id/optometristcheck"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/dentistcheck"
-        android:layout_marginTop="11dp"
-        android:text="Optometrist" />
-
-    <ProgressBar
-        android:id="@+id/progressBar"
-        style="?android:attr/progressBarStyleHorizontal"
+       <RadioGroup
+        android:id="@+id/selectedId"
+        android:checkedButton="@id/rbDoctor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true" />
+        android:layout_alignStart="@+id/textView2"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="23dp" >
 
+        <RadioButton
+            android:id="@+id/rbDoctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Doctor"/>
 
+        <RadioButton
+            android:id="@+id/rbDentist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Dentist"/>
 
+        <RadioButton
+            android:id="@+id/rbOptometrist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Optometrist"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/selectedId"
+        android:layout_alignTop="@+id/submit"
+        android:text="Description" />
+
+    <EditText
+        android:id="@+id/descAns"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/desc"
+        android:layout_alignBottom="@+id/desc"
+        android:layout_toStartOf="@+id/submit"
+        android:ems="10"
+        android:inputType="textPersonName"
+         />
 </RelativeLayout>

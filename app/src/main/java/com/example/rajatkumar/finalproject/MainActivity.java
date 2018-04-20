@@ -31,7 +31,7 @@ public class MainActivity extends Activity {
 
         buttonPatient.setOnClickListener(e ->{
             Log.i(ACTIVITY_NAME, "User clicked Patient Form");
-            Intent intent = new Intent(MainActivity.this, PatientMain.class);
+            Intent intent = new Intent(MainActivity.this, ProgrAndSnackBar.class);
             startActivity(intent);
         });
 

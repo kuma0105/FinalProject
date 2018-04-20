@@ -12,16 +12,24 @@ import android.util.Log;
  */
 
 public class PatientDatabase extends SQLiteOpenHelper {
-    public static final String DATABASE_NAME = "PatientDatabase";
-    public static int VERSION_NUM = 1;
+    public static final String DATABASE_NAME = "PatientDatabase.db";
+    public static int VERSION_NUM = 7;
     public static final String TABLE_NAME = "PatientRecord";
-    public static final String KEY_ID= "Patient_id";
-    public static final String KEY_name = "Full_Name";
-    public static final String KEY_DOB = "Date_of_Birth";
-    public static final String KEY_Address = "Address";
-    public static final String KEY_card = "HealthCard";
-    public static final String KEY_phone = "Phone";
-    public static final String KEY_DoctorType = "DoctorType";
+    public static final String Name_Column = "Full_Name";
+    public static final String DATE_OF_BIRTH = "Date_of_Birth";
+    public static final String ADDRESS = "ADDRESS";
+    public static final String KEY_card = "card";
+    public static final String KEY_phone = "phone";
+    public static final String KEY_Doctor_Type = "Doctor_Type";
+    public static final String KEY_Description = "Description";
+    public static final String KEY_PREVIOUS_SURGERIES = "PREVIOUS_SURGERIES";
+    public static final String KEY_Allergies = "Allergies";
+    public static final String KEY_Glass_Bought = "Glass_Bought";
+    public static final String KEY_Glass_Store = "Glass_Store";
+    public static final String KEY_Benefits = "Benefits";
+    public static final String KEY_Had_Braces = "Had_Braces";
+
+
     public PatientDatabase(Context ctx) {
         super(ctx, DATABASE_NAME, null, VERSION_NUM);
     }
@@ -30,24 +38,31 @@ public class PatientDatabase extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        String CREATE_CHAT_TABLE = "CREATE TABLE " + TABLE_NAME + " (" + KEY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + KEY_name + " TEXT ,"+KEY_DOB+"Date,"+KEY_Address+"Text,"+KEY_card+"Integer,"
-                +KEY_phone+"Integer,"+KEY_DoctorType+"Text"+");";
-
+        String CREATE_CHAT_TABLE = "CREATE TABLE " + TABLE_NAME + " ( _id  INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + Name_Column + " text, "+ DATE_OF_BIRTH +" Date, "+ ADDRESS +" Text, "+KEY_card+" Integer, "
+                +KEY_phone+" Integer, "+KEY_Doctor_Type+" Text, "+KEY_Description+" Text, "+KEY_PREVIOUS_SURGERIES+" Text, "+
+                KEY_Allergies+" Text, "+KEY_Benefits+" Text, "+KEY_Had_Braces+" Text, "+KEY_Glass_Bought+" Text, "+KEY_Glass_Store+" Text "+ ");";
         db.execSQL(CREATE_CHAT_TABLE);
     }
 
-    public void insertData(String name,String dob,String address,String card,String phone,String type){
+    public void insertData(String type,String name,String address,String dob,String phone,String card,String description, String previousSurgeries, String allergies,String glasses_bought, String glasses_store, String benefits, String braces){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
-        contentValues.put(KEY_name, name);
-        contentValues.put(KEY_DOB, dob);
-        contentValues.put(KEY_Address, address);
+        contentValues.put(Name_Column, name);
+        contentValues.put(DATE_OF_BIRTH, dob);
+        contentValues.put(ADDRESS, address);
         contentValues.put(KEY_card, card);
         contentValues.put(KEY_phone, phone);
-        contentValues.put(KEY_DoctorType, type);
-        long insertResult = db.insert(TABLE_NAME, null, contentValues);
-        Log.i("ChatDatabaseHelper", "insert data result: " + insertResult );
+        contentValues.put(KEY_Doctor_Type, type);
+        contentValues.put(KEY_Description,description);
+        contentValues.put(KEY_PREVIOUS_SURGERIES, previousSurgeries);
+        contentValues.put(KEY_Allergies, allergies);
+        contentValues.put(KEY_Benefits, benefits);
+        contentValues.put(KEY_Had_Braces, braces);
+        contentValues.put(KEY_Glass_Bought, glasses_bought);
+        contentValues.put(KEY_Glass_Store, glasses_store);
+        db.insert(TABLE_NAME, null, contentValues);
+PatientMain.notifyData();
     }
 
     @Override
@@ -56,6 +71,16 @@ public class PatientDatabase extends SQLiteOpenHelper {
         Log.i("ChatDatabaseHelper", "onUpdate version " + i +" to new database version: " +  l );
         onCreate(db);
 
+    }
+    public void onDowngrade(SQLiteDatabase db, int oldVer, int newVer) // newVer < oldVer
+    {
+        db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME ); //delete any existing data
+        onCreate(db);  //make a new database
+    }
+
+    public void onOpen(SQLiteDatabase db) //always gets called
+    {
+        Log.i("DATABASE", "Database opened");
     }
 
     public Cursor getData(){
