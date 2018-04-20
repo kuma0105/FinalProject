@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ਫਾਈਨਲ ਪ੍ਰੋਜੈਕਟ</string>
+    <string name="ok">ਠੀਕ ਹੈ</string>
+    <string name="cancel">ਰੱਦ ਕਰੋ</string>
+    <string name="dialog_message">ਬਾਹਰ ਜਾਓ</string>
+    <string name="help_dialog">\ਖੁਸ਼ਪ੍ਰੀਤ ਸਿੰਘ ਦੁਆਰਾ ਟ੍ਰਾਂਜਿਟ 1.0\n
+        \n
+        ਬੱਸ ਸਟੌਪ ਨੰਬਰ ਕਲਿਕ ਕਰਕੇ ਤੁਸੀਂ ਉਹ\n
+        ਸਟਾਪ ਦੇ ਰੂਟ ਨੰਬਰਾਂ ਨੂੰ ਦੇਖ ਸਕਦੇ ਹੋ|\n\n
+        ਰੂਟ ਨੰਬਰ ਤੇ ਕਲਿਕ ਕਰਕੇ ਤੁਸੀਂ ਯਾਤਰਾ \n
+        ਦਾ ਸਥਾਨ,ਬਸ ਵਿਥਕਾਰ ਅਤੇ ਲੰਬਕਾਰ,ਜੀ \n
+        ਪੀ ਐਸ ਸਪੀਡ ਯਾਤਰਾ ਦੀ ਸ਼ੁਰੂਆਤ ਸਮਾਂ,\n
+        ਐਡਜਸਟਡ ਸ਼ੈਡਿਊਲ ਟਾਈਮ ਚੈੱਕ ਕਰ ਸਕਦੇ ਹੋ|
+
+    </string>
+    <string name="Search_route">ਖੋਜ</string>
+    <string name="Help_title">ਮਦਦ!</string>
+
+</resources>
