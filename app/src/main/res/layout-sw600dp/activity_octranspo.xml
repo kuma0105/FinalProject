@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/coordinatorLayout"
+    android:layout_height="match_parent"
+    tools:context="com.example.rajatkumar.finalproject.OCTranspo">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        />
+
+
+
+        <EditText
+            android:id="@+id/stops_xml_edit"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:layout_below="@+id/toolbar"/>
+
+    <Button
+        android:id="@+id/stops_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/stops_xml_edit"
+        android:layout_below="@+id/toolbar"
+        android:text="@string/Search_route" />
+
+
+
+    <ListView
+        android:id="@+id/stops_xml"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+     android:layout_below="@+id/stops_xml_edit"
+        />
+        <FrameLayout
+            android:id="@+id/frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_toRightOf="@id/stops_button"
+            android:layout_below="@id/toolbar"
+
+            />
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

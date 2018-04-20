@@ -8,7 +8,9 @@
     <TextView
         android:id="@+id/STOPS_VIEW"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:text="TextView"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="30dp"
         />
 </LinearLayout>

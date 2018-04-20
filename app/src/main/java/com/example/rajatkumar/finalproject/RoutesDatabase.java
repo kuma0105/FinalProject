@@ -11,7 +11,7 @@ import android.util.Log;
 
 public class RoutesDatabase extends SQLiteOpenHelper {
     public static final int VERSION_NUM = 1;
-    public static final String DATABASE_NAME= "rout.db";
+    public static final String DATABASE_NAME= "routeeeeirtwe.db";
     public static final String TABLE_NAME= "routes";
     public final static String KEY_ID="id_key";
     public final static String KEY_ROUTES="routes";
@@ -22,7 +22,9 @@ public class RoutesDatabase extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+
         db.execSQL( "CREATE TABLE " + TABLE_NAME + " ( "+KEY_ID+" INTEGER PRIMARY KEY AUTOINCREMENT," +KEY_ROUTES+" text);" );
+
         Log.i("RoutesDatabase", "Calling onCreate");
     }
     @Override
